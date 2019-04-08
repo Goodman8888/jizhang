@@ -1,3 +1,8 @@
+//修复windows平台下，中文录入显示乱码的问题。 by goodman8888 2019.4.8
+
+
+
+
 ### 版本区分
 1. 本版本为PHP+MYSQL版本
 2. PHP+SQLite版本见：https://github.com/chenstor/jizhangSqlite
