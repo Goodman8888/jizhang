@@ -4,7 +4,14 @@ if(!defined("DB_HOST")){die('非法访问！');}
 $version = 'V2.0.2(19.03.01)';
 
 $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT); 
-if(!$conn){die('数据库打开失败！');}
+if(!$conn){die('数据库打开失败！');}else{
+//数据库增加中文录入。by bobo 2019-4-8 周一
+mysqli_select_db($conn,DB_NAME);
+mysqli_query($conn,'SET NAMES utf8');
+}
+
+
+
 
 if(substr(PHP_VERSION,0,1)>='7'){
 	define('PHP7', true);
@@ -324,4 +331,13 @@ if(empty($_COOKIE["userinfo"]) && $userid>0){
 	$_SESSION['uid'] = "";
 	gotourl(SiteURL."login.php");
 }
+
+
+
+
+
+
+
+
+
 ?>
